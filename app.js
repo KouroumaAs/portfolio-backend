@@ -32,4 +32,7 @@ app.use(fileUpload({
  app.listen(PORT,HOST,() => {
     console.log(`Listening on:${HOST}:${PORT}`);
   });
+  app.use("/",( req, res ) => {
+    res.send("<h2>You are on my api.</h2>")
+  })
   app.use("/api/contact", visitorRouter);
